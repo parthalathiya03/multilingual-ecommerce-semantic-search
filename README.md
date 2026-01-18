@@ -204,10 +204,10 @@ pip install -r requirements.txt
 ### Step 4: Verify Installation
 
 ```bash
-python -c "import sentence_transformers; print(f'✅ Version: {sentence_transformers.__version__}')"
+python -c "import sentence_transformers; print(f'Version: {sentence_transformers.__version__}')"
 ```
 
-Expected output: `✅ Version: 5.2.0` (or higher)
+Expected output: `Version: 5.2.0` (or higher)
 
 ---
 
@@ -249,7 +249,7 @@ for result in results:
 ### Run Full Demo
 
 ```bash
-python sentence.py
+python multilingual_ecommerce_semantic_search.py
 ```
 
 This runs the complete demo including:
@@ -664,62 +664,6 @@ quantized = ((value - min_val) / (max_val - min_val) * 255) - 128
 
 ---
 
-## 🛠️ Troubleshooting
-
-### Issue: "RuntimeError: linalg.vector_norm"
-
-**Cause:** Trying to use quantized embeddings directly in similarity calculations.
-
-**Solution:** The code now stores both float32 (for calculations) and quantized (for storage demonstration).
-
-### Issue: Model Download Fails
-
-**Solution:**
-
-```bash
-# Set cache directory
-export TRANSFORMERS_CACHE=/path/to/cache
-
-# Or download manually
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('all-MiniLM-L6-v2', cache_folder='./models')
-```
-
-### Issue: Out of Memory
-
-**Solutions:**
-
-1. Use smaller model: `all-MiniLM-L6-v2` (22M params)
-2. Reduce batch size: `batch_size=8`
-3. Enable quantization: `use_quantization=True`
-4. Process in chunks
-
-### Issue: Slow Performance
-
-**Solutions:**
-
-1. Enable ONNX backend: `backend='onnx'`
-2. Use GPU if available
-3. Enable caching (automatic in code)
-4. Reduce `top_k` for reranking
-
----
-
-## 📈 Roadmap
-
-### Planned Features
-
-- [ ] **Hybrid Search** - Integrate SPLADE sparse embeddings
-- [ ] **Vector Database Integration** - Qdrant, Pinecone, Weaviate
-- [ ] **Query Expansion** - Synonym handling, spelling correction
-- [ ] **Hard Negative Mining** - Improve training
-- [ ] **API Endpoint** - FastAPI REST service
-- [ ] **Batch Processing** - Handle millions of documents
-- [ ] **A/B Testing Framework** - Compare models in production
-- [ ] **Monitoring Dashboard** - Real-time metrics
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -745,23 +689,6 @@ pytest tests/
 # Format code
 black sentence.py
 ```
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **Sentence Transformers** - [UKPLab](https://github.com/UKPLab/sentence-transformers)
-- **Hugging Face** - Model hosting and transformers library
-- **MTEB Benchmark** - Evaluation framework
-- **Original Tutorial** - [YouTube Video](https://youtu.be/OlhNZg4gOvA)
-
----
 
 ## 📞 Contact
 

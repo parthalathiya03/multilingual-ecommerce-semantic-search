@@ -444,7 +444,7 @@ class MultilingualSearchEngine:
 
         if save_path:
             plt.savefig(save_path, dpi=150, bbox_inches='tight')
-            print(f"✅ Saved visualization to {save_path}")
+            print(f"Saved visualization to {save_path}")
 
         plt.tight_layout()
         plt.show()
@@ -460,11 +460,11 @@ def run_demo():
     # Create products
     products = create_sample_products()
 
-    print(f"\n📦 Created {len(products)} products in multiple languages:")
+    print(f"\n Created {len(products)} products in multiple languages:")
     languages = set(p.language for p in products)
-    print(f"   Languages: {', '.join(sorted(languages))}")
+    print(f"Languages: {', '.join(sorted(languages))}")
     categories = set(p.category for p in products)
-    print(f"   Categories: {', '.join(sorted(categories))}")
+    print(f"Categories: {', '.join(sorted(categories))}")
 
     engine = MultilingualSearchEngine(
         model_name='all-MiniLM-L6-v2',  # we can use 'BAAI/bge-m3' for true multilingual
@@ -553,7 +553,6 @@ def run_demo():
         print("="*80)
         engine.visualize_embeddings(method='tsne')
 
-    # comparing search with/without reranking
     print("\n" + "="*80)
     print("RERANKING COMPARISON")
     print("="*80)
@@ -565,7 +564,7 @@ def run_demo():
     print("\n Without Reranking:")
     results_no_rerank = engine.search(query, top_k=3, use_reranker=False)
     for r in results_no_rerank:
-        print(f"  {r['rank']}. {r['product'].name} (Score: {r['score']:.4f})")
+        print(f"{r['rank']}. {r['product'].name} (Score: {r['score']:.4f})")
 
     # with reranking
     print("\n With Cross-Encoder Reranking:")
@@ -581,5 +580,4 @@ def run_demo():
 
 
 if __name__ == "__main__":
-
     engine = run_demo()

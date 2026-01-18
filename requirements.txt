@@ -23,3 +23,6 @@ faiss-cpu>=1.7.4
 # qdrant-client>=1.7.0
 # chromadb>=0.4.0
 # pinecone-client>=3.0.0
+
+
+# https://github.com/huggingface/sentence-transformers

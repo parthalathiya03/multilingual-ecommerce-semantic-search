@@ -1,27 +1,3 @@
-"""
-=============================================================================
-PROJECT: MULTILINGUAL E-COMMERCE PRODUCT SEARCH ENGINE
-=============================================================================
-
-Real-World Use Case:
-Build a production-ready semantic search system for an international
-e-commerce platform that:
-
-1. Supports 100+ languages (English, Spanish, Hindi, Chinese, Arabic, etc.)
-2. Handles product descriptions, reviews, and FAQs
-3. Provides hybrid search (semantic + keyword matching)
-4. Reranks results for maximum relevance
-5. Optimized for production (quantization, caching)
-6. Visualizes search quality and embeddings
-
-Technologies:
-- Sentence Transformers v5.2
-- BGE-M3 for multilingual support
-- SPLADE for sparse retrieval
-- Cross-Encoder for reranking
-- Quantization for efficiency
-"""
-
 # pip install sentence-transformers==5.2.0 scikit-learn matplotlib plotly pandas
 
 import numpy as np

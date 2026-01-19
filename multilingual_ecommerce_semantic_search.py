@@ -401,7 +401,7 @@ class MultilingualSearchEngine:
             print("No embeddings to visualize")
             return
 
-        print(f"\n🎨 Visualizing embeddings using {method.upper()}...")
+        print(f"\n Visualizing embeddings using {method.upper()}...")
 
         # Convert to float32 if quantized
         emb = self.embeddings.astype(np.float32)

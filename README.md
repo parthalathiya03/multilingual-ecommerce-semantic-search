@@ -708,11 +708,6 @@ black sentence.py
 - [BGE Models](https://github.com/FlagOpen/FlagEmbedding)
 - [RAG Best Practices](https://www.anthropic.com/index/contextual-retrieval)
 
-### Related Projects
-
-- [LangChain](https://github.com/langchain-ai/langchain)
-- [LlamaIndex](https://github.com/run-llama/llama_index)
-- [Haystack](https://github.com/deepset-ai/haystack)
 
 ### Papers
 

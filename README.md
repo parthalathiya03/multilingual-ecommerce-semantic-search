@@ -481,19 +481,6 @@ After watching, viewers can:
 
 ---
 
-## 📊 Impact Analysis
-
-### If These Changes Are Implemented:
-
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| Viewer Confusion | ~40% | ~15% | **-62%** |
-| Production-Ready Skills | ~20% | ~70% | **+250%** |
-| Multilingual Awareness | ~5% | ~60% | **+1100%** |
-| Modern Best Practices | ~30% | ~85% | **+183%** |
-
----
-
 ## 🚀 Demonstration Project
 
 To validate these concepts, I created a **step-by-step implementation**:
@@ -510,7 +497,7 @@ To validate these concepts, I created a **step-by-step implementation**:
 5. Performance monitoring
 6. Cross-lingual search
 
-**Code:** See `sentence.py` (production-quality, fully commented)
+**Code:** See `multilingual_ecommerce_semantic_search.py` (production-quality, fully commented)
 
 **Note:** This is the *outcome* of following the tutorial, not the tutorial itself.
 
